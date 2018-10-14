@@ -26,7 +26,7 @@ console.log(makeEven('Yes Sir'), 'Yes Sir#');
 console.log(makeEven('Something'), 'Something#');
 console.log(makeEven('Nose'), 'Nose');
 console.log(makeEven('Okay'), "Okay");
-
+console.log('**********************************************************************************')
 /* 2
     @func getLastChar
     @param {string} str
@@ -45,6 +45,7 @@ console.log(getLastChar('pamela'), 'a');
 console.log(getLastChar('Jay'), 'y');
 console.log(getLastChar('Serge'), 'e');
 console.log(getLastChar('Jennifer'), 'r');
+console.log('**********************************************************************************')
 
 /* 3
     @func get3rdChar
@@ -54,6 +55,19 @@ console.log(getLastChar('Jennifer'), 'r');
     @example - get3rdChar('taq'); // 'q'
     @example - get3rdChar('mo'); // 'not enough characters!'
 */
+
+const get3rdChar = str => {
+    const notEnough = 'Not enough characters!'
+    if(str.length <= 2){
+        return notEnough;
+    }
+    return str.charAt(2);
+}
+
+console.log(get3rdChar('pa'), 'Not enough characters');
+console.log(get3rdChar('Jay'), 'y');
+console.log(get3rdChar('Al'), 'Not enough characters');
+console.log(get3rdChar('Jorge'), 'r');
 
 /* 4
     @func get3rdCharFromEnd
