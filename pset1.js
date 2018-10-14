@@ -16,6 +16,16 @@
     @example - makeEven('john'); // 'john'
 */
 
+const makeEven = (str) => {
+    const num = str.length
+    if(num % 2 !== 0) return str + '#';
+    return str;
+}
+
+console.log(makeEven('Yes Sir'), 'Yes Sir#');
+console.log(makeEven('Something'), 'Something#');
+console.log(makeEven('Nose'), 'Nose');
+console.log(makeEven('Okay'), "Okay");
 
 /* 2
     @func getLastChar
