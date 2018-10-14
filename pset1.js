@@ -16,8 +16,8 @@
     @example - makeEven('john'); // 'john'
 */
 
-const makeEven = (str) => {
-    const num = str.length
+const makeEven = str => {
+    const num = str.length;
     if(num % 2 !== 0) return str + '#';
     return str;
 }
@@ -34,6 +34,17 @@ console.log(makeEven('Okay'), "Okay");
     @desc - return the last character in string
     @example - getLastChar('taq'); // 'q'
 */
+
+const getLastChar = str => {
+
+    return str[str.length - 1];
+
+}
+
+console.log(getLastChar('pamela'), 'a');
+console.log(getLastChar('Jay'), 'y');
+console.log(getLastChar('Serge'), 'e');
+console.log(getLastChar('Jennifer'), 'r');
 
 /* 3
     @func get3rdChar
