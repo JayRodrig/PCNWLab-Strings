@@ -64,11 +64,11 @@ const get3rdChar = str => {
     return str.charAt(2);
 }
 
-console.log(get3rdChar('pa'), 'Not enough characters');
+console.log(get3rdChar('pa'), 'Not enough characters!');
 console.log(get3rdChar('Jay'), 'y');
-console.log(get3rdChar('Al'), 'Not enough characters');
+console.log(get3rdChar('Al'), 'Not enough characters!');
 console.log(get3rdChar('Jorge'), 'r');
-
+console.log('**********************************************************************************')
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -78,6 +78,19 @@ console.log(get3rdChar('Jorge'), 'r');
     @example - get3rdCharFromEnd('mo'); // 'not enough characters!'
     @example - get3rdCharFromEnd('taq karim'); // 'r'
 */
+
+const get3rdCharFromEnd = str => {
+    if(str.length <= 2) return 'Not enough characters!'
+    return str.slice(-3, -2);
+}
+
+console.log(get3rdCharFromEnd('taq'), 't');
+console.log(get3rdCharFromEnd('mo'), 'Not enough characters!');
+console.log(get3rdCharFromEnd('taq karim'), 'r');
+console.log(get3rdCharFromEnd('Jose'), 'o');
+console.log('**********************************************************************************')
+
+
 
 /* 5
     @func startsWithVowel
