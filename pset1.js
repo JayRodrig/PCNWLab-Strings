@@ -183,6 +183,15 @@ console.log('*******************************************************************
     @example - hasUpperCase('taq karim'); // false
 */
 
+const hasUpperCase = str => str.match(/[A-Z]/) ? true : false;
+
+console.log(hasUpperCase('Tqssrrr'), 'true');
+console.log(hasUpperCase('asdfa'), 'false');
+console.log(hasUpperCase('anDy'), 'true');
+console.log(hasUpperCase('ndae'), 'false');
+console.log(hasUpperCase('js'), 'false');
+console.log('**********************************************************************************')
+
 /* 9
     @func isPalindromic
     @param {string} str
