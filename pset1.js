@@ -163,6 +163,14 @@ console.log('*******************************************************************
     @example - hasVowels('taq karim'); // true
 */
 
+const hasVowels = str => str.match(/[aeiou]/) ? true : false; 
+
+console.log(hasVowels('tqssrrr'), 'false');
+console.log(hasVowels('asdfa'), 'true');
+console.log(hasVowels('andy'), 'true');
+console.log(hasVowels('ndae'), 'true');
+console.log(hasVowels('Js'), 'false');
+console.log('**********************************************************************************')
 
 /* 8
     @func hasUpperCase
