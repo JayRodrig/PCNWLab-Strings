@@ -103,6 +103,25 @@ console.log('*******************************************************************
     @example - startsWithVowel('Andy'); // true
 */
 
+const isItAVowel = input => {
+    const lowerCasedInput = input.toLowerCase();
+    if(lowerCasedInput.charAt(0) === 'a') return true;
+    if(lowerCasedInput.charAt(0) === 'e') return true;
+    if(lowerCasedInput.charAt(0) === 'i') return true;
+    if(lowerCasedInput.charAt(0) === 'o') return true;
+    if(lowerCasedInput.charAt(0) === 'u') return true;
+    return false;
+}
+
+const startsWithVowel = str => isItAVowel(str);
+
+console.log(startsWithVowel('taq'), 'false');
+console.log(startsWithVowel('asdf'), 'true');
+console.log(startsWithVowel('andy'), 'true');
+console.log(startsWithVowel('Andy'), 'true');
+console.log(startsWithVowel('Jose'), 'false');
+console.log('**********************************************************************************')
+
 /* 6
     @func endsWithVowel
     @param {string} str
