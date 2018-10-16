@@ -203,6 +203,21 @@ console.log('*******************************************************************
     @example - hasUpperCase('taq karim'); // false
 */
 
+const isPalindromic = str => {
+    const re = /[^A-Za-z0-9]/g;
+    lowRegStr = str.toLowerCase().replace(re, '');
+    const reverseStr = lowRegStr.split('').reverse().join('');
+    
+    return lowRegStr === reverseStr;
+}
+
+console.log(isPalindromic('A man, a plan, a canal. Panama'), 'Should return true');
+console.log(isPalindromic('Race Car'), 'This should return true');
+console.log(isPalindromic('I went to work today'), 'This should return false');
+console.log(isPalindromic('taq karim'), 'This should return false');
+console.log('********************************************************************************');
+
+
 /* 10
     @func getInitials
     @param {string} str
