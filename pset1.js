@@ -242,6 +242,7 @@ console.log(getInitials('Jose Rodriguez'), 'This should return JR');
 console.log(getInitials('Jennifer Jerez'), 'This should return JJ');
 console.log(getInitials('Yudy Cabreja'), 'This should return YC');
 console.log(getInitials('Ricky Rodriguez'), 'This should return RR');
+console.log('********************************************************************************');
 
 /* 11
     @func isPerfectStr
@@ -258,6 +259,32 @@ console.log(getInitials('Ricky Rodriguez'), 'This should return RR');
     @example - isPerfectStr('asdfaeKeccccc'); // true
 */
 
+/*
+const isPerfect = str => {
+    //has more than three characters
+    
+    //the three middle characters are arranged such that first character is vowel,
+    //second character is consonant and last character is another vowel
+    
+    //The three middle characters are palindromic
+    
+    const midChar = (Math.floor(str.length / 2));
+    const threeMidChars = str.slice((midChar - 1, midChar + 1));
+    console.log(threeMidChars);
+    // if(str.length >= 3 && midChar - 1 === str.match(/[aeiou]/) && 
+        // str.charAt(midChar) !== str.match(/[aeiou]/) && str.charAt(midChar + 1) === str.match(/[aeiou]/) &&
+            //  ) return true;
+
+}
+
+console.log(isPerfect('asdfaeKeccccc'));
+// console.log(isPerfect());
+// console.log(isPerfect());
+// console.log(isPerfect());
+console.log('********************************************************************************');
+*/
+
+
 /* 12
     @func strMasher
     @param {string} str1
@@ -269,3 +296,17 @@ console.log(getInitials('Ricky Rodriguez'), 'This should return RR');
     @example - capitalLast('hello', 'wrold'); // "helwroldlo"
 */
 
+
+const strMasher = (str1, str2) => {
+    const firstHalf = str1.slice(0, Math.ceil(str1.length / 2));
+    const secondHalf = str2.slice(Math.ceil(str1.length /2));
+    return firstHalf + str2 + secondHalf;
+}
+
+
+console.log(strMasher('help', 'me'), 'hemelp');
+console.log(strMasher('hello', 'wrold'), 'helwroldlo');
+// console.log(strMasher());
+// console.log(strMasher());
+// console.log(strMasher());
+console.log('********************************************************************************');
