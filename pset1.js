@@ -231,6 +231,18 @@ console.log('*******************************************************************
     @example - getInitials('sue RonaN'); // "sr"
 */
 
+const getInitials = str => {
+    const spaceChar = str.match(/[' ']/);
+    const secondInit = str.indexOf(spaceChar) + 1;
+    const firstInit = str.charAt(0);
+    return firstInit + str.charAt(secondInit);
+}
+
+console.log(getInitials('Jose Rodriguez'), 'This should return JR');
+console.log(getInitials('Jennifer Jerez'), 'This should return JJ');
+console.log(getInitials('Yudy Cabreja'), 'This should return YC');
+console.log(getInitials('Ricky Rodriguez'), 'This should return RR');
+
 /* 11
     @func isPerfectStr
     @param {string} str
